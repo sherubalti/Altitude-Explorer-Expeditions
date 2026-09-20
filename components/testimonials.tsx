@@ -11,7 +11,7 @@ const testimonials = [
   },
   {
     quote:
-      "Hunza in autumn was pure magic. Peak Route handled every detail and the local hospitality they arranged was beyond anything I expected.",
+      "Hunza in autumn was pure magic. Altitude Explorer handled every detail and the local hospitality they arranged was beyond anything I expected.",
     name: "Daniel Reyes",
     role: "Spain",
     initials: "DR",

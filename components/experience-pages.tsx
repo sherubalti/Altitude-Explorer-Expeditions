@@ -1,0 +1,73 @@
+import Link from "next/link"
+import { ArrowRight, Award, Compass, Mountain, ShieldCheck } from "lucide-react"
+
+const image = (id: string) => `https://images.unsplash.com/${id}?auto=format&fit=crop&w=1200&q=85`
+
+const guides = [
+  { name: "Ahsan Hussain", role: "Lead Expedition Guide", detail: "K2, Broad Peak & Gasherbrum specialist", years: "18 years in the Karakoram", languages: "Balti · Urdu · English", bio: "Ahsan leads complex high-altitude objectives with a calm, deliberate style. He has guided summit teams across the Karakoram and is known for careful acclimatization decisions and deep local knowledge.", image: image("photo-1544735716-392fe2489ffa") },
+  { name: "Sajid Ali", role: "Senior Trekking Guide", detail: "Baltoro, Concordia & Snow Lake", years: "14 years guiding mountain routes", languages: "Balti · Urdu · English", bio: "Sajid turns long glacier journeys into confident, memorable days on trail. His strengths are route finding, camp rhythm, and making every guest feel looked after from Skardu to base camp.", image: image("photo-1551632811-561732d1e306") },
+  { name: "Naveed Karim", role: "High-Altitude Safety Guide", detail: "Rescue, acclimatization & glacier travel", years: "12 years in expedition safety", languages: "Urdu · English · Shina", bio: "Naveed coordinates mountain safety systems, weather checks, radio communication, and emergency plans. He leads practical glacier sessions and helps teams make clear choices when conditions change.", image: image("photo-1522163182402-834f871fd851") },
+  { name: "Maryam Shah", role: "Cultural & Heritage Guide", detail: "Silk Road, forts & living traditions", years: "10 years in cultural tourism", languages: "Urdu · English · Balti", bio: "Maryam introduces guests to the stories behind Pakistan’s mountain communities. Her journeys connect architecture, food, faith, and family traditions with respectful conversations led by local hosts.", image: image("photo-1530789253388-582c481c54b0") },
+  { name: "Imran Baig", role: "Trekking & Training Guide", detail: "Beginner treks, rope skills & preparation", years: "11 years coaching mountain teams", languages: "Balti · Urdu · English", bio: "Imran helps first-time trekkers build confidence before they reach the trail. He combines practical fitness guidance with rope, equipment, and movement sessions for safer mountain travel.", image: image("photo-1486911278844-a81c5267e227") },
+]
+
+const climbing = [
+  ["K2 Expedition", "The world’s second-highest peak at 8,611m and one of mountaineering’s ultimate challenges. Full logistics, high-altitude staff, and acclimatization rotations support every serious objective.", "photo-1544735716-392fe2489ffa"],
+  ["Broad Peak Expedition", "An 8,047m giant rising above Concordia. Broad Peak is a demanding objective for experienced climbers seeking a classic Karakoram 8000m route.", "photo-1464822759023-fed622ff2c3b"],
+  ["Gasherbrum I & II", "Twin giants of the Karakoram, offering technical glacier routes, high camps, and extraordinary views from the heart of the Baltoro region.", "photo-1454496522488-7a8e488e8606"],
+  ["Nanga Parbat Expedition", "Known as the Killer Mountain, Nanga Parbat’s 8,126m Rupal Face is one of the world’s most dramatic rock-and-ice landscapes.", "photo-1522163182402-834f871fd851"],
+  ["Spantik Expedition", "The 7,027m Golden Peak is a beautiful progression objective for climbers preparing for larger Himalayan and Karakoram summits.", "photo-1464278533981-50106e6176b1"],
+  ["Technical Climbing Training", "Rope systems, ice-axe movement, glacier travel, and crevasse rescue practice for teams preparing to climb with confidence.", "photo-1519681393784-d120267933ba"],
+]
+
+const trekking = [
+  ["K2 Base Camp Trek", "Walk the Baltoro Glacier toward Concordia and the foot of K2 on Pakistan’s signature high-altitude trek.", "7–10 days", "photo-1551632811-561732d1e306"],
+  ["Concordia", "The Throne Room of the Mountain Gods, where K2, Broad Peak, and the Gasherbrums meet in one panorama.", "8–12 days", "photo-1464822759023-fed622ff2c3b"],
+  ["Snow Lake Trek", "A remote glacial basin of immense scale for experienced trekkers looking for silence, ice, and true wilderness.", "12–16 days", "photo-1454496522488-7a8e488e8606"],
+  ["Deosai Plateau", "High meadows, wildflowers, brown bear habitat, and Sheosar Lake across the Land of Giants.", "4–6 days", "photo-1500534623283-312aade485b7"],
+  ["Fairy Meadows", "A gentle alpine escape with a face-on view of Nanga Parbat and its changing light.", "3–5 days", "photo-1500534623283-312aade485b7"],
+  ["Rush Lake Trek", "A challenging approach to one of Pakistan’s highest alpine lakes, surrounded by sharp Karakoram peaks.", "5–7 days", "photo-1486911278844-a81c5267e227"],
+  ["Thallay La", "A quieter crossing through Balti villages, shepherd paths, and pristine high meadows linking Khaplu and Shigar.", "5–8 days", "photo-1527631746610-bca00a040d60"],
+  ["Hunza Valley Walks", "Orchards, terraced fields, old villages, and Rakaposhi views make this a welcoming introduction to the north.", "4–7 days", "photo-1530789253388-582c481c54b0"],
+]
+
+const culture = [
+  ["Baltit Fort", "A 700-year-old royal fort above Karimabad, revealing Hunza’s layered history, craftsmanship, and mountain trade routes.", "photo-1539650116574-75c0c6d73f6e"],
+  ["Khaplu Palace", "A restored Balti royal residence where carved timber, courtyards, and local stories bring the past into the present.", "photo-1518005020951-eccb494ad742"],
+  ["Kalash Festivals", "Meet local hosts and learn about the distinctive music, rituals, dress, and seasonal celebrations of the Kalash valleys.", "photo-1533130061792-64b345e4a833"],
+  ["Manthal Buddha Rock", "A rare Buddhist carving near Skardu, connecting today’s mountain communities with the ancient routes of the region.", "photo-1519681393784-d120267933ba"],
+  ["Silk Road Route", "Trace old caravan corridors through the Indus Valley, connecting Taxila, Chilas, Gilgit, Hunza, and Khunjerab.", "photo-1500534623283-312aade485b7"],
+  ["Local Village Life", "Share food and stories with families whose hospitality, farming, and craft traditions shape life in the high valleys.", "photo-1527631746610-bca00a040d60"],
+  ["Chaqchan Mosque", "Discover one of Baltistan’s oldest mosques, celebrated for its intricate woodwork and remarkable blend of regional influences.", "photo-1518005020951-eccb494ad742"],
+]
+
+function PageHero({ eyebrow, title, body, imageId }: { eyebrow: string; title: string; body: string; imageId: string }) {
+  return <section className="relative isolate overflow-hidden bg-slate-950 px-4 pb-20 pt-36 text-white sm:px-6 lg:px-8"><img src={image(imageId)} alt="Mountain landscape in northern Pakistan" className="absolute inset-0 -z-10 h-full w-full object-cover opacity-45" /><div className="absolute inset-0 -z-10 bg-gradient-to-r from-slate-950 via-slate-950/70 to-slate-950/20" /><div className="mx-auto max-w-7xl"><p className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-amber-300">{eyebrow}</p><h1 className="max-w-3xl text-4xl font-bold tracking-tight sm:text-6xl">{title}</h1><p className="mt-6 max-w-2xl text-lg leading-8 text-white/80">{body}</p></div></section>
+}
+
+function GalleryCard({ title, description, imageId, meta }: { title: string; description: string; imageId: string; meta?: string }) {
+  return <article className="group overflow-hidden rounded-2xl border border-border/70 bg-card shadow-sm"><div className="aspect-[4/3] overflow-hidden"><img src={image(imageId)} alt={title} className="h-full w-full object-cover transition duration-500 group-hover:scale-105" /></div><div className="p-6"><div className="flex items-center justify-between gap-3"><h2 className="text-xl font-semibold">{title}</h2>{meta && <span className="whitespace-nowrap text-xs font-semibold uppercase tracking-wider text-primary">{meta}</span>}</div><p className="mt-3 leading-7 text-muted-foreground">{description}</p></div></article>
+}
+
+export function GuidesPage() {
+  return <><PageHero eyebrow="People of the mountains" title="Meet the guides behind every journey." body="Five specialists, one shared standard: thoughtful leadership, honest mountain judgment, and a deep respect for the communities that call the north home." imageId="photo-1522163182402-834f871fd851" /><main className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8"><div className="mb-12 grid gap-6 md:grid-cols-3"><div className="rounded-2xl bg-primary p-6 text-primary-foreground"><Mountain className="h-7 w-7" /><h2 className="mt-8 text-xl font-semibold">Local knowledge</h2><p className="mt-2 text-sm leading-6 opacity-85">Routes, weather, villages, and mountain etiquette learned over years in the field.</p></div><div className="rounded-2xl bg-secondary p-6"><ShieldCheck className="h-7 w-7 text-primary" /><h2 className="mt-8 text-xl font-semibold">Safety-led decisions</h2><p className="mt-2 text-sm leading-6 text-muted-foreground">Plans are built around acclimatization, communication, and clear turnaround choices.</p></div><div className="rounded-2xl bg-secondary p-6"><Award className="h-7 w-7 text-primary" /><h2 className="mt-8 text-xl font-semibold">Professional care</h2><p className="mt-2 text-sm leading-6 text-muted-foreground">From the first briefing to the final transfer, every detail has an accountable owner.</p></div></div><div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">{guides.map((guide) => <article key={guide.name} className="overflow-hidden rounded-2xl border border-border/70 bg-card"><div className="aspect-[4/3] overflow-hidden"><img src={guide.image} alt={`${guide.name}, ${guide.role}`} className="h-full w-full object-cover" /></div><div className="p-6"><p className="text-sm font-semibold uppercase tracking-wider text-primary">{guide.role}</p><h2 className="mt-2 text-2xl font-bold">{guide.name}</h2><p className="mt-2 text-sm font-medium text-foreground/70">{guide.detail}</p><p className="mt-4 text-sm leading-6 text-muted-foreground">{guide.bio}</p><div className="mt-5 border-t border-border pt-4 text-xs font-medium uppercase tracking-wider text-muted-foreground"><p>{guide.years}</p><p className="mt-2">{guide.languages}</p></div></div></article>)}</div></main></>
+}
+
+export function GalleryPage({ type }: { type: "climbing" | "trekking" | "culture" }) {
+  const isClimbing = type === "climbing"
+  const isTrekking = type === "trekking"
+  const title = isClimbing ? "Climbing & expeditions" : isTrekking ? "Trekking in the north" : "Culture & heritage"
+  const body = isClimbing ? "High-altitude objectives, technical preparation, and serious expedition logistics across the Karakoram and Himalaya." : isTrekking ? "From glacier corridors to green alpine meadows, choose a trail that matches your pace, ambition, and curiosity." : "Travel beyond the viewpoint. Meet the people, places, and stories that make Pakistan’s mountain regions unforgettable."
+  const items = isClimbing ? climbing : isTrekking ? trekking : culture
+  return <><PageHero eyebrow={isClimbing ? "Summit with confidence" : isTrekking ? "Walk further north" : "Stories in every valley"} title={title} body={body} imageId={isClimbing ? "photo-1464822759023-fed622ff2c3b" : isTrekking ? "photo-1551632811-561732d1e306" : "photo-1539650116574-75c0c6d73f6e"} /><main className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8"><div className="mb-12 flex flex-wrap items-end justify-between gap-5"><div><p className="text-sm font-semibold uppercase tracking-[0.2em] text-primary">Altitude Explorer experiences</p><h2 className="mt-3 text-3xl font-bold">Find your way into the story.</h2></div><Link href="/#contact" className="inline-flex items-center gap-2 font-semibold text-primary hover:underline">Plan a custom journey <ArrowRight className="h-4 w-4" /></Link></div><div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">{items.map((item) => <GalleryCard key={item[0]} title={item[0]} description={item[1]} imageId={item[2]} meta={isTrekking ? item[2] : undefined} />)}</div></main></>
+}
+
+export function AboutPage() {
+  return <><PageHero eyebrow="Our story" title="A mountain company rooted in Skardu." body="Altitude Explorer Expeditions creates thoughtful, well-supported journeys across the Karakoram, Himalaya, and Hindu Kush." imageId="photo-1464278533981-50106e6176b1" /><main className="mx-auto max-w-5xl px-4 py-16 sm:px-6 lg:px-8"><div className="grid gap-12 md:grid-cols-[1.1fr_.9fr]"><div><p className="text-lg leading-8 text-muted-foreground">Altitude Explorer Expeditions is a Pakistan-based adventure and cultural tourism company specializing in high-altitude mountaineering, technical climbing, trekking, expedition training, historical exploration, and cultural journeys across the north.</p><p className="mt-6 text-lg leading-8 text-muted-foreground">Based in Skardu, we organize professionally planned expeditions to K2, Broad Peak, Gasherbrum I & II, Nanga Parbat, and Spantik—supported by experienced guides, high-altitude staff, and reliable logistics. Beyond the summits, we open the door to ancient forts, Buddhist heritage, Silk Road routes, and the traditions of mountain communities.</p></div><div className="rounded-2xl bg-secondary p-8"><Compass className="h-8 w-8 text-primary" /><h2 className="mt-6 text-2xl font-bold">What guides us</h2><ul className="mt-6 space-y-4 text-sm leading-6 text-muted-foreground"><li><strong className="text-foreground">Safety:</strong> honest briefings, realistic itineraries, and decisions that put people first.</li><li><strong className="text-foreground">Sustainability:</strong> lighter footprints, local employment, and respect for fragile landscapes.</li><li><strong className="text-foreground">Cultural respect:</strong> experiences shaped with local hosts, not staged for visitors.</li></ul></div></div></main></>
+}
+
+export const pageLinks = [{ label: "About Us", href: "/about" }, { label: "Our Guides", href: "/guides" }, { label: "Climbing", href: "/climbing" }, { label: "Trekking", href: "/trekking" }, { label: "Culture", href: "/culture" }]
+
+export function ExperienceNav() { return <nav className="border-b border-border bg-background"><div className="mx-auto flex max-w-7xl gap-1 overflow-x-auto px-4 py-3 sm:px-6 lg:px-8">{pageLinks.map((link) => <Link key={link.href} href={link.href} className="whitespace-nowrap rounded-full px-4 py-2 text-sm font-medium text-muted-foreground transition hover:bg-secondary hover:text-foreground">{link.label}</Link>)}</div></nav> }
+
+export function ExperienceLayout({ children }: { children: React.ReactNode }) { return <div className="min-h-screen bg-background">{children}</div> }

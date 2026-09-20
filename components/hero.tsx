@@ -27,6 +27,9 @@ export function Hero() {
             Altitude Explorer Expeditions creates expertly guided mountaineering,
             trekking, training, and cultural journeys across the Karakoram, Himalaya,
             and Hindu Kush — from our home in Skardu, Gilgit-Baltistan.
+            Altitude Explorer crafts expertly guided treks, expeditions, and
+            cultural journeys across the Karakoram, Himalaya, and Hindu Kush —
+            with local guides who call these mountains home.
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">

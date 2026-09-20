@@ -3,9 +3,9 @@ import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Altitude Explorer Expeditions | Skardu Mountain Adventures',
+  title: 'Altitude Explorer | Karakoram Treks & Expeditions',
   description:
-    'Altitude Explorer Expeditions creates professionally planned mountaineering, trekking, cultural, and historical journeys across Pakistan from Skardu, Gilgit-Baltistan.',
+    'Altitude Explorer crafts unforgettable treks, expeditions, and cultural journeys across the Karakoram, Himalaya, and Hindu Kush with expert local guides.',
   generator: 'v0.app',
   icons: {
     icon: [

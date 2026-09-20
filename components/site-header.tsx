@@ -3,15 +3,18 @@
 import { useState } from "react"
 import { Menu, X, Phone } from "lucide-react"
 import { BrandLogo } from "@/components/brand-logo"
+import { useEffect, useState } from "react"
+import { Menu, X, Phone } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
 const navLinks = [
   { label: "Home", href: "/" },
-  { label: "Destinations", href: "/destinations" },
-  { label: "Expeditions", href: "/expeditions" },
-  { label: "About Us", href: "/about" },
-  { label: "Contact", href: "/contact" },
+  { label: "About", href: "/about" },
+  { label: "Guides", href: "/guides" },
+  { label: "Climbing", href: "/climbing" },
+  { label: "Trekking", href: "/trekking" },
+  { label: "Culture", href: "/culture" },
 ]
 
 export function SiteHeader() {
@@ -23,10 +26,20 @@ export function SiteHeader() {
         "fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-[#081b30]/95 shadow-lg backdrop-blur-md",
       )}
     >
-      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
-        <a href="/" className="font-semibold tracking-tight text-white"><BrandLogo /></a>
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
+        <a
+          href="#home"
+          className="flex h-12 w-48 items-center overflow-hidden rounded-md"
+          aria-label="Altitude Explorer home"
+        >
+          <img
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Gemini_Generated_Image_jxwgvjxwgvjxwgvj-RHFGWvvWczIMF2bbjh6PwVXmIb7xjo.jpg"
+            alt="Altitude Explorer mountain climber logo"
+            className="h-full w-full scale-[1.45] object-cover"
+          />
+        </a>
 
-        <nav className="hidden items-center gap-1 md:flex" aria-label="Primary">
+        <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary">
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -41,7 +54,7 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <div className="hidden items-center gap-3 md:flex">
+        <div className="hidden items-center gap-3 lg:flex">
           <a
             href="tel:+923327525752"
             className={cn(
@@ -63,6 +76,8 @@ export function SiteHeader() {
           className={cn(
             "inline-flex h-10 w-10 items-center justify-center rounded-md md:hidden",
             "text-white hover:bg-white/10",
+            "inline-flex h-10 w-10 items-center justify-center rounded-md lg:hidden",
+            scrolled ? "text-foreground hover:bg-accent" : "text-white hover:bg-white/10",
           )}
           aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
@@ -72,7 +87,7 @@ export function SiteHeader() {
       </div>
 
       {open && (
-        <div className="border-t border-border bg-background md:hidden">
+        <div className="border-t border-border bg-background lg:hidden">
           <nav className="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-4" aria-label="Mobile">
             {navLinks.map((link) => (
               <a
