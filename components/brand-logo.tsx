@@ -2,11 +2,17 @@ const logoUrl = "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Gemini_
 
 export function BrandLogo({ compact = false }: { compact?: boolean }) {
   return (
-    <span className={compact ? "relative block h-10 w-16 overflow-hidden rounded-md border border-primary/30 bg-[#081b30]" : "relative block h-12 w-[172px] overflow-hidden rounded-md border border-primary/30 bg-[#081b30]"}>
+    <span
+      className={
+        compact
+          ? "relative block h-10 w-24 shrink-0 overflow-hidden rounded-md border border-primary/30 bg-[#081b30]"
+          : "relative block h-14 w-52 shrink-0 overflow-hidden rounded-md border border-primary/30 bg-[#081b30]"
+      }
+    >
       <img
         src={logoUrl}
         alt="Altitude Explorer Expeditions logo"
-        className="absolute inset-0 size-full scale-[1.35] object-cover object-center"
+        className="absolute inset-0 size-full scale-[2.1] object-cover object-center"
       />
     </span>
   )
