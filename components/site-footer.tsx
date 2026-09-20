@@ -78,7 +78,7 @@ export function SiteFooter() {
               <img
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Gemini_Generated_Image_puwpedpuwpedpuwp-removebg-preview-21D4lkfAIpjeVkKE2o0d8uyAe8gsc8.png"
                 alt="Altitude Explorer mountain climber logo"
-                className="h-full w-full scale-[2.4] object-contain"
+                className="h-full w-full scale-[2.2] object-contain"
               />
             </a>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/70">

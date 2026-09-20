@@ -42,11 +42,11 @@ const culture = [
 ]
 
 function PageHero({ eyebrow, title, body, imageId }: { eyebrow: string; title: string; body: string; imageId: string }) {
-  return <section className="relative isolate overflow-hidden bg-slate-950 px-4 pb-20 pt-36 text-white sm:px-6 lg:px-8"><img src={image(imageId)} alt="Mountain landscape in northern Pakistan" className="absolute inset-0 -z-10 h-full w-full object-cover opacity-45" /><div className="absolute inset-0 -z-10 bg-gradient-to-r from-slate-950 via-slate-950/70 to-slate-950/20" /><div className="mx-auto max-w-7xl"><p className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-amber-300">{eyebrow}</p><h1 className="max-w-3xl text-4xl font-bold tracking-tight sm:text-6xl">{title}</h1><p className="mt-6 max-w-2xl text-lg leading-8 text-white/80">{body}</p></div></section>
+  return <section className="relative isolate overflow-hidden bg-slate-950 px-4 pb-16 pt-32 text-white sm:pb-20 sm:pt-36 sm:px-6 lg:px-8"><img src={image(imageId)} alt="Mountain landscape in northern Pakistan" className="absolute inset-0 -z-10 h-full w-full object-cover opacity-45" /><div className="absolute inset-0 -z-10 bg-gradient-to-r from-slate-950 via-slate-950/70 to-slate-950/20" /><div className="mx-auto max-w-7xl"><p className="mb-4 text-sm font-semibold uppercase tracking-[0.25em] text-amber-300">{eyebrow}</p><h1 className="max-w-3xl text-4xl font-bold tracking-tight sm:text-6xl">{title}</h1><p className="mt-6 max-w-2xl text-lg leading-8 text-white/80">{body}</p></div></section>
 }
 
 function GalleryCard({ title, description, imageId, meta }: { title: string; description: string; imageId: string; meta?: string }) {
-  return <article className="group overflow-hidden rounded-2xl border border-border/70 bg-card shadow-sm"><div className="aspect-[4/3] overflow-hidden"><img src={image(imageId)} alt={title} className="h-full w-full object-cover transition duration-500 group-hover:scale-105" /></div><div className="p-6"><div className="flex items-center justify-between gap-3"><h2 className="text-xl font-semibold">{title}</h2>{meta && <span className="whitespace-nowrap text-xs font-semibold uppercase tracking-wider text-primary">{meta}</span>}</div><p className="mt-3 leading-7 text-muted-foreground">{description}</p></div></article>
+  return <article className="group overflow-hidden rounded-2xl border border-border/70 bg-card shadow-sm"><div className="aspect-[4/3] overflow-hidden"><img src={image(imageId)} alt={title} className="h-full w-full object-cover transition duration-500 group-hover:scale-105" /></div><div className="p-6"><div className="flex flex-col items-start gap-2 sm:flex-row sm:items-center sm:justify-between"><h2 className="text-xl font-semibold">{title}</h2>{meta && <span className="text-xs font-semibold uppercase tracking-wider text-primary">{meta}</span>}</div><p className="mt-3 leading-7 text-muted-foreground">{description}</p></div></article>
 }
 
 export function GuidesPage() {
@@ -68,6 +68,6 @@ export function AboutPage() {
 
 export const pageLinks = [{ label: "About Us", href: "/about" }, { label: "Our Guides", href: "/guides" }, { label: "Climbing", href: "/climbing" }, { label: "Trekking", href: "/trekking" }, { label: "Culture", href: "/culture" }]
 
-export function ExperienceNav() { return <nav className="border-b border-border bg-background"><div className="mx-auto flex max-w-7xl gap-1 overflow-x-auto px-4 py-3 sm:px-6 lg:px-8">{pageLinks.map((link) => <Link key={link.href} href={link.href} className="whitespace-nowrap rounded-full px-4 py-2 text-sm font-medium text-muted-foreground transition hover:bg-secondary hover:text-foreground">{link.label}</Link>)}</div></nav> }
+export function ExperienceNav() { return <nav className="border-b border-border bg-background pt-16 lg:pt-16"><div className="mx-auto flex max-w-7xl gap-1 overflow-x-auto px-4 py-3 sm:px-6 lg:px-8">{pageLinks.map((link) => <Link key={link.href} href={link.href} className="whitespace-nowrap rounded-full px-4 py-2 text-sm font-medium text-muted-foreground transition hover:bg-secondary hover:text-foreground">{link.label}</Link>)}</div></nav> }
 
 export function ExperienceLayout({ children }: { children: React.ReactNode }) { return <div className="min-h-screen bg-background">{children}</div> }

@@ -34,16 +34,16 @@ export function SiteHeader() {
           : "bg-gradient-to-b from-black/50 to-transparent",
       )}
     >
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-2 px-3 sm:gap-4 sm:px-6 lg:px-8">
         <a
           href="/"
-          className="flex h-12 w-52 items-center"
+          className="flex h-12 w-44 shrink-0 items-center overflow-visible sm:w-52"
           aria-label="Altitude Explorer home"
         >
           <img
             src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Gemini_Generated_Image_puwpedpuwpedpuwp-removebg-preview-21D4lkfAIpjeVkKE2o0d8uyAe8gsc8.png"
             alt="Altitude Explorer mountain climber logo"
-            className="h-full w-full scale-[2.4] object-contain"
+            className="h-full w-full scale-[2.2] object-contain"
           />
         </a>
 
