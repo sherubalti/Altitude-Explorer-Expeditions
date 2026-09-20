@@ -71,14 +71,14 @@ export function SiteFooter() {
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-4">
             <a
-              href="#home"
-              className="flex h-14 w-56 items-center overflow-hidden rounded-md"
+              href="/"
+              className="flex h-16 w-64 items-center"
               aria-label="Altitude Explorer home"
             >
               <img
-                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Gemini_Generated_Image_jxwgvjxwgvjxwgvj-RHFGWvvWczIMF2bbjh6PwVXmIb7xjo.jpg"
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Gemini_Generated_Image_puwpedpuwpedpuwp-removebg-preview-21D4lkfAIpjeVkKE2o0d8uyAe8gsc8.png"
                 alt="Altitude Explorer mountain climber logo"
-                className="h-full w-full scale-[1.45] object-cover"
+                className="h-full w-full scale-[2.4] object-contain"
               />
             </a>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/70">
@@ -95,8 +95,8 @@ export function SiteFooter() {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="h-4 w-4 shrink-0 text-primary" aria-hidden="true" />
-                <a href="mailto:hello@peakroute.com" className="hover:text-white">
-                  hello@peakroute.com
+                <a href="mailto:hello@altitudeexplorer.com" className="hover:text-white">
+                  hello@altitudeexplorer.com
                 </a>
               </li>
               <li className="flex items-center gap-3">

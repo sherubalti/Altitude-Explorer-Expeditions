@@ -22,7 +22,7 @@ export function CtaSection() {
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Button
-                render={<a href="mailto:hello@peakroute.com" />}
+                render={<a href="mailto:hello@altitudeexplorer.com" />}
                 size="lg"
                 className="h-12 px-7 text-base shadow-lg"
               >
