@@ -19,6 +19,7 @@ export type Tour = {
   description: string
   details?: string
   highlights?: string[]
+  stayPlan?: string
 }
 
 const difficultyStyles: Record<Tour["difficulty"], string> = {
@@ -88,20 +89,25 @@ export function TourCard({ tour }: { tour: Tour }) {
           </div>
         )}
 
-        <div className="mt-4 flex flex-wrap items-center gap-2">
-          <span className="inline-flex items-center gap-1.5 rounded-md bg-secondary px-2.5 py-1 text-xs font-medium text-secondary-foreground">
-            <Clock className="h-3.5 w-3.5" aria-hidden="true" />
-            {tour.duration}
-          </span>
-          <span
-            className={cn(
-              "inline-flex items-center gap-1.5 rounded-md px-2.5 py-1 text-xs font-semibold",
-              difficultyStyles[tour.difficulty],
-            )}
-          >
-            <TrendingUp className="h-3.5 w-3.5" aria-hidden="true" />
-            {tour.difficulty}
-          </span>
+        <div className="mt-4 flex flex-col gap-2">
+          <div className="flex flex-wrap items-center gap-2">
+            <span className="inline-flex items-center gap-1.5 rounded-md bg-secondary px-2.5 py-1 text-xs font-medium text-secondary-foreground">
+              <Clock className="h-3.5 w-3.5" aria-hidden="true" />
+              {tour.duration}
+            </span>
+            <span
+              className={cn(
+                "inline-flex items-center gap-1.5 rounded-md px-2.5 py-1 text-xs font-semibold",
+                difficultyStyles[tour.difficulty],
+              )}
+            >
+              <TrendingUp className="h-3.5 w-3.5" aria-hidden="true" />
+              {tour.difficulty}
+            </span>
+          </div>
+          <p className="text-xs leading-relaxed text-muted-foreground">
+            <span className="font-semibold text-foreground">Stay plan:</span> {tour.stayPlan}
+          </p>
         </div>
 
         <div className="mt-5 flex items-end justify-between border-t border-border pt-4">
