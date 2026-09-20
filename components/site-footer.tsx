@@ -1,5 +1,5 @@
 import type { SVGProps } from "react"
-import { Mountain, Phone, Mail, MapPin, Send } from "lucide-react"
+import { Phone, Mail, MapPin, Send } from "lucide-react"
 import { Button } from "@/components/ui/button"
 
 function FacebookIcon(props: SVGProps<SVGSVGElement>) {
@@ -70,16 +70,16 @@ export function SiteFooter() {
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-4">
-            <a href="#home" className="flex items-center gap-2">
-              <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-                <Mountain className="h-5 w-5" aria-hidden="true" />
-              </span>
-              <span className="flex flex-col leading-none">
-                <span className="text-base font-bold text-white">Peak Route</span>
-                <span className="text-[0.65rem] font-medium uppercase tracking-[0.2em] text-primary">
-                  Adventure
-                </span>
-              </span>
+            <a
+              href="#home"
+              className="flex h-14 w-56 items-center overflow-hidden rounded-md"
+              aria-label="Altitude Explorer home"
+            >
+              <img
+                src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Gemini_Generated_Image_jxwgvjxwgvjxwgvj-RHFGWvvWczIMF2bbjh6PwVXmIb7xjo.jpg"
+                alt="Altitude Explorer mountain climber logo"
+                className="h-full w-full scale-[1.45] object-cover"
+              />
             </a>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/70">
               Guiding adventurers to the roof of the world since 2009. Certified
@@ -168,7 +168,7 @@ export function SiteFooter() {
         </div>
 
         <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-xs text-white/60 sm:flex-row">
-          <p>© {new Date().getFullYear()} Peak Route Adventure. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Altitude Explorer. All rights reserved.</p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-white">Privacy Policy</a>
             <a href="#" className="hover:text-white">Terms of Service</a>

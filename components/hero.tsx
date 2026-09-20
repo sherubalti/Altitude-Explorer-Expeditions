@@ -24,7 +24,7 @@ export function Hero() {
           </h1>
 
           <p className="mt-5 max-w-xl text-pretty text-lg leading-relaxed text-white/85">
-            Peak Route Adventure crafts expertly guided treks, expeditions, and
+            Altitude Explorer crafts expertly guided treks, expeditions, and
             cultural journeys across the Karakoram, Himalaya, and Hindu Kush —
             with local guides who call these mountains home.
           </p>

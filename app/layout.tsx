@@ -3,9 +3,9 @@ import type { Metadata, Viewport } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Peak Route Adventure | Karakoram Treks & Expeditions',
+  title: 'Altitude Explorer | Karakoram Treks & Expeditions',
   description:
-    'Peak Route Adventure crafts unforgettable treks, expeditions, and cultural journeys across the Karakoram, Himalaya, and Hindu Kush with expert local guides.',
+    'Altitude Explorer crafts unforgettable treks, expeditions, and cultural journeys across the Karakoram, Himalaya, and Hindu Kush with expert local guides.',
   generator: 'v0.app',
   icons: {
     icon: [
