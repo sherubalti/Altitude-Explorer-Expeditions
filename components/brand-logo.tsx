@@ -12,7 +12,7 @@ export function BrandLogo({ compact = false }: { compact?: boolean }) {
       <img
         src={logoUrl}
         alt="Altitude Explorer Expeditions logo"
-        className="block size-full scale-[1.55] object-cover object-center"
+        className="block size-full scale-[1.25] object-cover object-center"
       />
     </span>
   )
