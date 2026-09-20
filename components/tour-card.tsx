@@ -1,4 +1,7 @@
-import { Star, MapPin, Clock, TrendingUp, ArrowRight } from "lucide-react"
+"use client"
+
+import { useState } from "react"
+import { Star, MapPin, Clock, TrendingUp, ArrowRight, ChevronDown } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
@@ -14,6 +17,8 @@ export type Tour = {
   price: number
   tag?: string
   description: string
+  details?: string
+  highlights?: string[]
 }
 
 const difficultyStyles: Record<Tour["difficulty"], string> = {
@@ -23,6 +28,8 @@ const difficultyStyles: Record<Tour["difficulty"], string> = {
 }
 
 export function TourCard({ tour }: { tour: Tour }) {
+  const [isExpanded, setIsExpanded] = useState(false)
+
   return (
     <article className="group flex flex-col overflow-hidden rounded-2xl border border-border bg-card shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-primary/40 hover:shadow-xl">
       <div className="relative aspect-[4/3] overflow-hidden">
@@ -56,6 +63,30 @@ export function TourCard({ tour }: { tour: Tour }) {
         <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
           {tour.description}
         </p>
+
+        <button
+          type="button"
+          aria-expanded={isExpanded}
+          onClick={() => setIsExpanded((expanded) => !expanded)}
+          className="mt-3 inline-flex w-fit items-center gap-1.5 text-sm font-semibold text-primary transition-colors hover:text-primary/80"
+        >
+          {isExpanded ? "Hide details" : "More details"}
+          <ChevronDown className={cn("h-4 w-4 transition-transform", isExpanded && "rotate-180")} aria-hidden="true" />
+        </button>
+
+        {isExpanded && (
+          <div className="mt-4 rounded-xl bg-secondary/60 p-4 text-sm text-secondary-foreground">
+            <p className="leading-relaxed">{tour.details ?? tour.description}</p>
+            <ul className="mt-3 grid gap-2 sm:grid-cols-2">
+              {(tour.highlights ?? []).map((highlight) => (
+                <li key={highlight} className="flex gap-2 leading-relaxed">
+                  <span className="mt-2 size-1.5 shrink-0 rounded-full bg-primary" aria-hidden="true" />
+                  {highlight}
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
 
         <div className="mt-4 flex flex-wrap items-center gap-2">
           <span className="inline-flex items-center gap-1.5 rounded-md bg-secondary px-2.5 py-1 text-xs font-medium text-secondary-foreground">
