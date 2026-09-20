@@ -22,16 +22,16 @@ export function CtaSection() {
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row">
               <Button
-                render={<a href="mailto:hello@peakroute.com" />}
+                render={<a href="tel:+923327525752" />}
                 size="lg"
                 className="h-12 px-7 text-base shadow-lg"
               >
-                Get a Free Quote
+                Call for a Free Quote
               </Button>
               <Button
                 render={
                   <a
-                    href="https://wa.me/923400000000"
+                    href="https://wa.me/9234276930403"
                     target="_blank"
                     rel="noopener noreferrer"
                   />

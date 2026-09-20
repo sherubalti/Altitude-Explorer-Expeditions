@@ -1,6 +1,7 @@
 import { SiteHeader } from "@/components/site-header"
 import { Hero } from "@/components/hero"
 import { StatsBar } from "@/components/stats-bar"
+import { AboutSection } from "@/components/about-section"
 import { ToursSection } from "@/components/tours-section"
 import { WhyChooseUs } from "@/components/why-choose-us"
 import { Testimonials } from "@/components/testimonials"
@@ -21,6 +22,7 @@ export default function Page() {
       <main className="flex-1">
         <Hero />
         <StatsBar />
+        <AboutSection />
         <ToursSection />
         <WhyChooseUs />
         <Testimonials />

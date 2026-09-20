@@ -75,22 +75,21 @@ export function SiteFooter() {
                 <Mountain className="h-5 w-5" aria-hidden="true" />
               </span>
               <span className="flex flex-col leading-none">
-                <span className="text-base font-bold text-white">Peak Route</span>
+                <span className="text-base font-bold text-white">Altitude Explorer</span>
                 <span className="text-[0.65rem] font-medium uppercase tracking-[0.2em] text-primary">
-                  Adventure
+                  Expeditions
                 </span>
               </span>
             </a>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/70">
-              Guiding adventurers to the roof of the world since 2009. Certified
-              local experts, unforgettable routes, responsible travel.
+              Professional mountain, trekking, cultural, and historical journeys from Skardu into the Karakoram, Himalaya, and Hindu Kush.
             </p>
 
             <ul className="mt-6 space-y-3 text-sm">
               <li className="flex items-center gap-3">
                 <Phone className="h-4 w-4 shrink-0 text-primary" aria-hidden="true" />
-                <a href="tel:+923400000000" className="hover:text-white">
-                  +92 340 000 0000
+                <a href="tel:+923327525752" className="hover:text-white">
+                  +92 332 752 5752 / +92 342 693 0403
                 </a>
               </li>
               <li className="flex items-center gap-3">
@@ -101,7 +100,7 @@ export function SiteFooter() {
               </li>
               <li className="flex items-center gap-3">
                 <MapPin className="h-4 w-4 shrink-0 text-primary" aria-hidden="true" />
-                Skardu, Gilgit-Baltistan, Pakistan
+                Ali Chowk, near Hawa Market, Baltistan Silicon Lab, 1st Floor, 3rd Office, Skardu
               </li>
             </ul>
           </div>
@@ -168,7 +167,7 @@ export function SiteFooter() {
         </div>
 
         <div className="mt-14 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-8 text-xs text-white/60 sm:flex-row">
-          <p>© {new Date().getFullYear()} Peak Route Adventure. All rights reserved.</p>
+          <p>© {new Date().getFullYear()} Altitude Explorer Expeditions. All rights reserved.</p>
           <div className="flex gap-6">
             <a href="#" className="hover:text-white">Privacy Policy</a>
             <a href="#" className="hover:text-white">Terms of Service</a>

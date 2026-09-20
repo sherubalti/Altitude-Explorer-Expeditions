@@ -20,13 +20,13 @@ export function Hero() {
           </span>
 
           <h1 className="mt-6 text-balance text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
-            Find Your Route to the World&apos;s Highest Peaks
+            Climb Higher. Explore Deeper. Discover Pakistan.
           </h1>
 
           <p className="mt-5 max-w-xl text-pretty text-lg leading-relaxed text-white/85">
-            Peak Route Adventure crafts expertly guided treks, expeditions, and
-            cultural journeys across the Karakoram, Himalaya, and Hindu Kush —
-            with local guides who call these mountains home.
+            Altitude Explorer Expeditions creates expertly guided mountaineering,
+            trekking, training, and cultural journeys across the Karakoram, Himalaya,
+            and Hindu Kush — from our home in Skardu, Gilgit-Baltistan.
           </p>
 
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">

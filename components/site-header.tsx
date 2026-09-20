@@ -52,7 +52,7 @@ export function SiteHeader() {
                 scrolled ? "text-foreground" : "text-white",
               )}
             >
-              Peak Route
+              Altitude Explorer
             </span>
             <span
               className={cn(
@@ -60,7 +60,7 @@ export function SiteHeader() {
                 scrolled ? "text-primary" : "text-primary-foreground/90",
               )}
             >
-              Adventure
+              Expeditions
             </span>
           </span>
         </a>
@@ -84,14 +84,14 @@ export function SiteHeader() {
 
         <div className="hidden items-center gap-3 md:flex">
           <a
-            href="tel:+923400000000"
+            href="tel:+923327525752"
             className={cn(
               "flex items-center gap-2 text-sm font-medium transition-colors",
               scrolled ? "text-foreground/80 hover:text-primary" : "text-white/90 hover:text-white",
             )}
           >
             <Phone className="h-4 w-4" aria-hidden="true" />
-            +92 340 000 0000
+            +92 332 752 5752
           </a>
           <Button render={<a href="#tours" />} className="shadow-md">
             Book a Trek
