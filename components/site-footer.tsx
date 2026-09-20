@@ -1,5 +1,6 @@
 import type { SVGProps } from "react"
-import { Mountain, Phone, Mail, MapPin, Send } from "lucide-react"
+import { Phone, Mail, MapPin, Send } from "lucide-react"
+import { BrandLogo } from "@/components/brand-logo"
 import { Button } from "@/components/ui/button"
 
 function FacebookIcon(props: SVGProps<SVGSVGElement>) {
@@ -38,28 +39,28 @@ const columns = [
   {
     title: "Explore",
     links: [
-      { label: "All Tours", href: "#tours" },
-      { label: "K2 Base Camp", href: "#tours" },
-      { label: "Hunza Valley", href: "#tours" },
-      { label: "Fairy Meadows", href: "#tours" },
+      { label: "All Destinations", href: "/destinations" },
+      { label: "K2 Base Camp", href: "/destinations" },
+      { label: "Hunza Valley", href: "/destinations" },
+      { label: "Fairy Meadows", href: "/destinations" },
     ],
   },
   {
     title: "Company",
     links: [
-      { label: "About Us", href: "#why-us" },
-      { label: "Our Guides", href: "#why-us" },
-      { label: "Reviews", href: "#reviews" },
-      { label: "Contact", href: "#contact" },
+      { label: "About Us", href: "/about" },
+      { label: "Our Expeditions", href: "/expeditions" },
+      { label: "Reviews", href: "/#reviews" },
+      { label: "Contact", href: "/contact" },
     ],
   },
   {
     title: "Support",
     links: [
-      { label: "Travel Insurance", href: "#contact" },
-      { label: "Packing Guides", href: "#contact" },
-      { label: "FAQs", href: "#contact" },
-      { label: "Booking Terms", href: "#contact" },
+      { label: "Travel Insurance", href: "/contact" },
+      { label: "Packing Guides", href: "/contact" },
+      { label: "FAQs", href: "/contact" },
+      { label: "Booking Terms", href: "/contact" },
     ],
   },
 ]
@@ -70,17 +71,7 @@ export function SiteFooter() {
       <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-12">
           <div className="lg:col-span-4">
-            <a href="#home" className="flex items-center gap-2">
-              <span className="flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-primary-foreground">
-                <Mountain className="h-5 w-5" aria-hidden="true" />
-              </span>
-              <span className="flex flex-col leading-none">
-                <span className="text-base font-bold text-white">Altitude Explorer</span>
-                <span className="text-[0.65rem] font-medium uppercase tracking-[0.2em] text-primary">
-                  Expeditions
-                </span>
-              </span>
-            </a>
+            <a href="/" className="text-white"><BrandLogo /></a>
             <p className="mt-4 max-w-sm text-sm leading-relaxed text-white/70">
               Professional mountain, trekking, cultural, and historical journeys from Skardu into the Karakoram, Himalaya, and Hindu Kush.
             </p>
@@ -94,8 +85,8 @@ export function SiteFooter() {
               </li>
               <li className="flex items-center gap-3">
                 <Mail className="h-4 w-4 shrink-0 text-primary" aria-hidden="true" />
-                <a href="mailto:hello@peakroute.com" className="hover:text-white">
-                  hello@peakroute.com
+                <a href="mailto:hello@altitudeexplorer.pk" className="hover:text-white">
+                  hello@altitudeexplorer.pk
                 </a>
               </li>
               <li className="flex items-center gap-3">

@@ -1,16 +1,17 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { Menu, X, Mountain, Phone } from "lucide-react"
+import { Menu, X, Phone } from "lucide-react"
+import { BrandLogo } from "@/components/brand-logo"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
 const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "Tours", href: "#tours" },
-  { label: "Why Us", href: "#why-us" },
-  { label: "Reviews", href: "#reviews" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "Destinations", href: "/destinations" },
+  { label: "Expeditions", href: "/expeditions" },
+  { label: "About Us", href: "/about" },
+  { label: "Contact", href: "/contact" },
 ]
 
 export function SiteHeader() {
@@ -34,36 +35,7 @@ export function SiteHeader() {
       )}
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
-        <a
-          href="#home"
-          className="flex items-center gap-2 font-semibold tracking-tight"
-        >
-          <span
-            className={cn(
-              "flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-primary-foreground shadow-md",
-            )}
-          >
-            <Mountain className="h-5 w-5" aria-hidden="true" />
-          </span>
-          <span className="flex flex-col leading-none">
-            <span
-              className={cn(
-                "text-base font-bold",
-                scrolled ? "text-foreground" : "text-white",
-              )}
-            >
-              Altitude Explorer
-            </span>
-            <span
-              className={cn(
-                "text-[0.65rem] font-medium uppercase tracking-[0.2em]",
-                scrolled ? "text-primary" : "text-primary-foreground/90",
-              )}
-            >
-              Expeditions
-            </span>
-          </span>
-        </a>
+        <a href="/" className={cn("font-semibold tracking-tight", !scrolled && "text-white")}><BrandLogo /></a>
 
         <nav className="hidden items-center gap-1 md:flex" aria-label="Primary">
           {navLinks.map((link) => (
@@ -93,7 +65,7 @@ export function SiteHeader() {
             <Phone className="h-4 w-4" aria-hidden="true" />
             +92 332 752 5752
           </a>
-          <Button render={<a href="#tours" />} className="shadow-md">
+          <Button render={<a href="/contact" />} className="shadow-md">
             Book a Trek
           </Button>
         </div>
@@ -126,7 +98,7 @@ export function SiteHeader() {
               </a>
             ))}
             <Button
-              render={<a href="#tours" onClick={() => setOpen(false)} />}
+              render={<a href="/contact" onClick={() => setOpen(false)} />}
               className="mt-2 w-full"
             >
               Book a Trek
