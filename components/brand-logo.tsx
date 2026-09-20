@@ -5,14 +5,14 @@ export function BrandLogo({ compact = false }: { compact?: boolean }) {
     <span
       className={
         compact
-          ? "relative block h-10 w-24 shrink-0 overflow-hidden rounded-md border border-primary/30 bg-[#081b30]"
-          : "relative block h-14 w-52 shrink-0 overflow-hidden rounded-md border border-primary/30 bg-[#081b30]"
+          ? "relative block h-9 w-[68px] shrink-0 overflow-hidden rounded-md bg-[#081b30]"
+          : "relative block h-16 w-[176px] shrink-0 overflow-hidden rounded-md bg-[#081b30]"
       }
     >
       <img
         src={logoUrl}
         alt="Altitude Explorer Expeditions logo"
-        className="absolute inset-0 size-full scale-[2.1] object-cover object-center"
+        className="block size-full scale-[1.55] object-cover object-center"
       />
     </span>
   )

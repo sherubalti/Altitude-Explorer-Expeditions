@@ -34,7 +34,7 @@ export function SiteHeader() {
           : "bg-gradient-to-b from-black/50 to-transparent",
       )}
     >
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
+      <div className="mx-auto flex h-20 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
         <a href="/" className={cn("font-semibold tracking-tight", !scrolled && "text-white")}><BrandLogo /></a>
 
         <nav className="hidden items-center gap-1 md:flex" aria-label="Primary">
