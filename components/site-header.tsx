@@ -6,11 +6,12 @@ import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
 const navLinks = [
-  { label: "Home", href: "#home" },
-  { label: "Tours", href: "#tours" },
-  { label: "Why Us", href: "#why-us" },
-  { label: "Reviews", href: "#reviews" },
-  { label: "Contact", href: "#contact" },
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Guides", href: "/guides" },
+  { label: "Climbing", href: "/climbing" },
+  { label: "Trekking", href: "/trekking" },
+  { label: "Culture", href: "/culture" },
 ]
 
 export function SiteHeader() {
@@ -46,7 +47,7 @@ export function SiteHeader() {
           />
         </a>
 
-        <nav className="hidden items-center gap-1 md:flex" aria-label="Primary">
+        <nav className="hidden items-center gap-1 lg:flex" aria-label="Primary">
           {navLinks.map((link) => (
             <a
               key={link.href}
@@ -63,7 +64,7 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <div className="hidden items-center gap-3 md:flex">
+        <div className="hidden items-center gap-3 lg:flex">
           <a
             href="tel:+923400000000"
             className={cn(
@@ -83,7 +84,7 @@ export function SiteHeader() {
           type="button"
           onClick={() => setOpen((v) => !v)}
           className={cn(
-            "inline-flex h-10 w-10 items-center justify-center rounded-md md:hidden",
+            "inline-flex h-10 w-10 items-center justify-center rounded-md lg:hidden",
             scrolled ? "text-foreground hover:bg-accent" : "text-white hover:bg-white/10",
           )}
           aria-label={open ? "Close menu" : "Open menu"}
@@ -94,7 +95,7 @@ export function SiteHeader() {
       </div>
 
       {open && (
-        <div className="border-t border-border bg-background md:hidden">
+        <div className="border-t border-border bg-background lg:hidden">
           <nav className="mx-auto flex max-w-7xl flex-col gap-1 px-4 py-4" aria-label="Mobile">
             {navLinks.map((link) => (
               <a
