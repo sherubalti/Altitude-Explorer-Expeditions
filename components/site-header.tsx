@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { Menu, X, Mountain, Phone } from "lucide-react"
+import { Menu, X, Phone } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { cn } from "@/lib/utils"
 
@@ -36,33 +36,14 @@ export function SiteHeader() {
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-4 sm:px-6 lg:px-8">
         <a
           href="#home"
-          className="flex items-center gap-2 font-semibold tracking-tight"
+          className="flex h-12 w-48 items-center overflow-hidden rounded-md"
+          aria-label="Altitude Explorer home"
         >
-          <span
-            className={cn(
-              "flex h-9 w-9 items-center justify-center rounded-lg bg-primary text-primary-foreground shadow-md",
-            )}
-          >
-            <Mountain className="h-5 w-5" aria-hidden="true" />
-          </span>
-          <span className="flex flex-col leading-none">
-            <span
-              className={cn(
-                "text-base font-bold",
-                scrolled ? "text-foreground" : "text-white",
-              )}
-            >
-              Peak Route
-            </span>
-            <span
-              className={cn(
-                "text-[0.65rem] font-medium uppercase tracking-[0.2em]",
-                scrolled ? "text-primary" : "text-primary-foreground/90",
-              )}
-            >
-              Adventure
-            </span>
-          </span>
+          <img
+            src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Gemini_Generated_Image_jxwgvjxwgvjxwgvj-RHFGWvvWczIMF2bbjh6PwVXmIb7xjo.jpg"
+            alt="Altitude Explorer mountain climber logo"
+            className="h-full w-full scale-[1.45] object-cover"
+          />
         </a>
 
         <nav className="hidden items-center gap-1 md:flex" aria-label="Primary">
